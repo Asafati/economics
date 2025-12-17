@@ -1,157 +1,205 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Basic Accounting | Economics Learning</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
 
-  <!-- SIDEBAR -->
-  <aside id="sidebar" class="fixed top-0 left-0 h-screen w-64 bg-blue-950 text-white z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
-    <div class="p-6 border-b border-blue-800">
-      <h2 class="text-xl font-bold">Asafati Gea</h2>
-      <p class="text-sm opacity-80">Economics Learning</p>
+<!-- ================= MOBILE HEADER ================= -->
+<header class="md:hidden fixed top-0 inset-x-0 bg-blue-900 text-white z-50 shadow">
+  <div class="flex items-center justify-between px-4 py-3">
+    <h1 class="font-bold text-lg">Basic Accounting</h1>
+    <button id="menuBtn" class="text-2xl">☰</button>
+  </div>
+</header>
+
+<!-- ================= SIDEBAR ================= -->
+<aside
+  id="sidebar"
+  class="fixed top-0 left-0 h-screen w-64 bg-blue-950 text-white z-40
+         transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+
+  <div class="p-6 border-b border-blue-800">
+    <h2 class="text-xl font-bold">Asafati Gea</h2>
+    <p class="text-sm opacity-80">Economics Learning</p>
+  </div>
+
+  <nav class="p-6 space-y-2">
+    <a href="index.html" class="block px-4 py-2 rounded-lg hover:bg-blue-700">Home</a>
+    <a href="micro.html" class="block px-4 py-2 rounded-lg hover:bg-blue-700">Microeconomics</a>
+    <a href="macro.html" class="block px-4 py-2 rounded-lg hover:bg-blue-700">Macroeconomics</a>
+    <a href="market.html" class="block px-4 py-2 rounded-lg hover:bg-blue-700">Market System</a>
+    <a href="inflation.html" class="block px-4 py-2 rounded-lg hover:bg-blue-700">Inflation & Policy</a>
+    <a href="accounting.html" class="block px-4 py-2 rounded-lg bg-blue-700">
+      Basic Accounting
+    </a>
+  </nav>
+
+  <p class="absolute bottom-6 left-6 text-xs opacity-70">
+    © 2019 – Economics Project
+  </p>
+</aside>
+
+<!-- ================= OVERLAY ================= -->
+<div id="overlay" class="fixed inset-0 bg-black/40 hidden z-30 md:hidden"></div>
+
+<!-- ================= MAIN ================= -->
+<main class="md:ml-64 pt-20 md:pt-0">
+
+<!-- ================= HERO ================= -->
+<section
+  class="min-h-screen flex items-center bg-gradient-to-br from-blue-900 to-indigo-800
+         text-white px-4 sm:px-6 lg:px-8">
+
+  <div class="max-w-5xl mx-auto text-center">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+      Dasar-dasar Akuntansi
+    </h1>
+
+    <p class="text-base sm:text-lg md:text-xl opacity-90 mb-4">
+      Memahami fondasi pencatatan dan pelaporan keuangan
+    </p>
+
+    <p class="italic text-lg md:text-xl mb-8">
+      “Akuntansi adalah bahasa bisnis.”
+    </p>
+
+    <a href="#concept"
+       class="inline-block bg-white text-blue-900 px-8 py-3 rounded-full
+              font-semibold hover:bg-gray-200 transition">
+      Pelajari Akuntansi
+    </a>
+  </div>
+</section>
+
+<!-- ================= CONCEPT ================= -->
+<section id="concept"
+  class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+
+  <h2 class="text-3xl font-bold mb-6">Apa Itu Akuntansi?</h2>
+
+  <p class="text-lg leading-relaxed mb-6">
+    Akuntansi adalah sistem pencatatan, pengklasifikasian,
+    dan pelaporan transaksi keuangan suatu entitas
+    untuk membantu pengambilan keputusan ekonomi.
+  </p>
+
+  <p class="text-lg leading-relaxed">
+    Informasi akuntansi digunakan oleh manajer,
+    investor, kreditor, dan pemerintah.
+  </p>
+</section>
+
+<!-- ================= PRINCIPLES ================= -->
+<section class="bg-white py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-8">Prinsip Dasar Akuntansi</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-2xl shadow bg-gray-50">
+        <h3 class="font-bold text-xl mb-2">Entitas Ekonomi</h3>
+        <p class="text-sm">
+          Keuangan perusahaan dipisahkan dari pemilik.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl shadow bg-gray-50">
+        <h3 class="font-bold text-xl mb-2">Kesinambungan Usaha</h3>
+        <p class="text-sm">
+          Perusahaan diasumsikan akan terus beroperasi.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl shadow bg-gray-50">
+        <h3 class="font-bold text-xl mb-2">Pengakuan Pendapatan</h3>
+        <p class="text-sm">
+          Pendapatan diakui saat transaksi terjadi.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl shadow bg-gray-50">
+        <h3 class="font-bold text-xl mb-2">Biaya Historis</h3>
+        <p class="text-sm">
+          Aset dicatat berdasarkan biaya perolehan.
+        </p>
+      </div>
     </div>
+  </div>
+</section>
 
-    <nav class="p-6 space-y-4">
-      <a href="index.html" class="block py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-white">Home</a>
-      <a href="micro.html" class="block py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-white">Microeconomics</a>
-      <a href="macro.html" class="block py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-white">Macroeconomics</a>
-      <a href="market.html" class="block py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-white">Market System</a>
-      <a href="inflation.html" class="block py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-white">Inflation & Policy</a>
-      <a href="accounting.html" class="block py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-white">Basic Accounting</a>
-    </nav>
-    
-    <div class="absolute bottom-6 left-6 right-6 text-xs opacity-70">
-      © 2019 – Economics Project
+<!-- ================= FINANCIAL STATEMENTS ================= -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-8">Laporan Keuangan</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-2xl shadow bg-white">
+        <h3 class="font-bold text-xl mb-2">Neraca</h3>
+        <p class="text-sm">
+          Menunjukkan posisi aset, kewajiban, dan ekuitas.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl shadow bg-white">
+        <h3 class="font-bold text-xl mb-2">Laba Rugi</h3>
+        <p class="text-sm">
+          Menunjukkan pendapatan dan beban perusahaan.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl shadow bg-white">
+        <h3 class="font-bold text-xl mb-2">Arus Kas</h3>
+        <p class="text-sm">
+          Mencatat aliran kas masuk dan keluar.
+        </p>
+      </div>
     </div>
-  </aside>
+  </div>
+</section>
 
-  <!-- OVERLAY (Mobile) -->
-  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-30 md:hidden"></div>
+<!-- ================= IMPORTANCE ================= -->
+<section class="bg-white py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">Pentingnya Akuntansi</h2>
 
-  <!-- MAIN CONTENT -->
-  <main class="md:ml-64 pt-20 md:pt-0">
+    <p class="text-lg leading-relaxed">
+      Akuntansi membantu perusahaan membuat keputusan,
+      menjaga transparansi, dan memastikan kelangsungan usaha.
+    </p>
+  </div>
+</section>
 
-    <!-- HERO SECTION -->
-    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-indigo-800 text-white px-6">
-      <div class="max-w-4xl text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6">
-          Dasar-dasar Akuntansi
-        </h1>
-        <p class="text-lg md:text-xl opacity-90 mb-4">
-          Memahami prinsip-prinsip dasar akuntansi yang mendasari pembuatan laporan keuangan.
-        </p>
-        <p class="italic text-xl mb-8">
-          “Akuntansi adalah bahasa bisnis yang digunakan untuk memahami dan mengevaluasi kinerja keuangan.”
-        </p>
-        <a href="#concept" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
-          Jelajahi Dasar-dasar Akuntansi
-        </a>
-      </div>
-    </section>
+<!-- ================= CTA ================= -->
+<section class="py-12 px-4 sm:px-6 lg:px-8 text-center">
+  <a href="index.html"
+     class="inline-block bg-blue-900 text-white px-8 py-3 rounded-full
+            font-semibold hover:bg-blue-800 transition">
+    Kembali ke Home →
+  </a>
+</section>
 
-    <!-- CONCEPTUAL FRAMEWORK -->
-    <section id="concept" class="py-20 px-6 max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold mb-6">Apa Itu Akuntansi?</h2>
-      <p class="text-lg leading-relaxed">
-        Akuntansi adalah sistem pencatatan, pengklasifikasian, dan pelaporan transaksi keuangan yang terjadi dalam sebuah entitas, seperti perusahaan. Tujuannya adalah untuk menyediakan informasi keuangan yang dibutuhkan untuk pengambilan keputusan ekonomi yang lebih baik.
-      </p>
-      <p class="text-lg leading-relaxed mt-6">
-        Akuntansi juga berfungsi untuk mengidentifikasi, mengukur, dan melaporkan informasi keuangan yang relevan untuk para pengguna informasi tersebut, seperti manajer, investor, kreditor, dan pemerintah.
-      </p>
-    </section>
+</main>
 
-    <!-- PRINCIPLES OF ACCOUNTING -->
-    <section class="bg-white py-20 px-6">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl font-bold mb-6">Prinsip Dasar Akuntansi</h2>
-        <p class="text-lg leading-relaxed mb-6">
-          Prinsip dasar akuntansi mencakup serangkaian aturan dan pedoman yang harus diikuti dalam menyusun laporan keuangan. Berikut adalah beberapa prinsip yang paling umum digunakan dalam akuntansi:
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white p-6 rounded-2xl shadow-lg">
-            <h3 class="font-bold text-xl mb-2">Prinsip Entitas Ekonomi</h3>
-            <p class="text-sm">Entitas ekonomi harus dipisahkan dari pemilik atau pihak lain yang terlibat, sehingga transaksi perusahaan hanya mencerminkan aktivitas keuangan perusahaan itu sendiri.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow-lg">
-            <h3 class="font-bold text-xl mb-2">Prinsip Kesinambungan Usaha</h3>
-            <p class="text-sm">Akuntansi harus diasumsikan bahwa perusahaan akan terus beroperasi di masa depan, kecuali ada bukti yang menunjukkan sebaliknya.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow-lg">
-            <h3 class="font-bold text-xl mb-2">Prinsip Pengakuan Pendapatan</h3>
-            <p class="text-sm">Pendapatan harus diakui pada saat transaksi terjadi, bukan pada saat pembayaran diterima, sesuai dengan prinsip accrual accounting.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow-lg">
-            <h3 class="font-bold text-xl mb-2">Prinsip Biaya Historis</h3>
-            <p class="text-sm">Semua aset harus dicatat berdasarkan biaya perolehan awal, bukan nilai pasar saat ini.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- ================= SCRIPT ================= -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
 
-    <!-- FINANCIAL STATEMENTS -->
-    <section class="py-20 px-6 bg-gray-100">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl font-bold mb-6">Laporan Keuangan</h2>
-        <p class="text-lg leading-relaxed mb-6">
-          Laporan keuangan adalah alat utama yang digunakan dalam akuntansi untuk menyajikan informasi keuangan perusahaan. Ada tiga jenis laporan keuangan utama:
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-white p-6 rounded-2xl shadow-lg">
-            <h3 class="font-bold text-xl mb-2">Neraca</h3>
-            <p class="text-sm">Neraca adalah laporan yang mencatat posisi keuangan perusahaan pada titik waktu tertentu, menunjukkan aset, kewajiban, dan ekuitas pemilik perusahaan.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow-lg">
-            <h3 class="font-bold text-xl mb-2">Laporan Laba Rugi</h3>
-            <p class="text-sm">Laporan laba rugi menunjukkan pendapatan, biaya, dan laba atau rugi yang dihasilkan oleh perusahaan selama periode tertentu.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow-lg">
-            <h3 class="font-bold text-xl mb-2">Laporan Arus Kas</h3>
-            <p class="text-sm">Laporan arus kas mencatat semua transaksi kas yang masuk dan keluar dari perusahaan, mencakup aktivitas operasi, investasi, dan pendanaan.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+  menuBtn?.addEventListener("click", () => {
+    sidebar.classList.toggle("-translate-x-full");
+    overlay.classList.toggle("hidden");
+  });
 
-    <!-- IMPORTANCE OF ACCOUNTING -->
-    <section class="bg-white py-20 px-6">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl font-bold mb-6">Pentingnya Akuntansi</h2>
-        <p class="text-lg leading-relaxed mb-6">
-          Akuntansi sangat penting bagi perusahaan dan ekonomi secara keseluruhan. Dengan laporan keuangan yang akurat, perusahaan dapat mengambil keputusan yang lebih baik, mengelola risiko, dan memastikan kelangsungan operasional. Selain itu, akuntansi memungkinkan transparansi yang diperlukan bagi investor, kreditor, dan pemangku kepentingan lainnya.
-        </p>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-10 px-6 text-center">
-      <a href="#about" class="inline-block bg-blue-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-800 transition">
-        Pelajari Lebih Lanjut Tentang Ekonomi
-      </a>
-    </section>
-
-  </main>
-
-  <!-- SCRIPT TO TOGGLE SIDEBAR ON MOBILE -->
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-
-    menuBtn?.addEventListener('click', () => {
-      sidebar.classList.toggle('-translate-x-full');
-      overlay.classList.toggle('hidden');
-    });
-
-    overlay?.addEventListener('click', () => {
-      sidebar.classList.add('-translate-x-full');
-      overlay.classList.add('hidden');
-    });
-  </script>
+  overlay?.addEventListener("click", () => {
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+  });
+</script>
 
 </body>
 </html>

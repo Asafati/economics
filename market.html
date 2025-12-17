@@ -1,139 +1,198 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Market System | Economics Learning</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
 
-  <!-- SIDEBAR -->
-  <aside id="sidebar" class="fixed top-0 left-0 h-screen w-64 bg-blue-950 text-white z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
-    <div class="p-6 border-b border-blue-800">
-      <h2 class="text-xl font-bold">Asafati Gea</h2>
-      <p class="text-sm opacity-80">Economics Learning</p>
-    </div>
+<!-- ================= MOBILE HEADER ================= -->
+<header class="md:hidden fixed top-0 inset-x-0 bg-blue-900 text-white z-50 shadow">
+  <div class="flex items-center justify-between px-4 py-3">
+    <h1 class="font-bold text-lg">Market System</h1>
+    <button id="menuBtn" class="text-2xl">☰</button>
+  </div>
+</header>
 
-    <nav class="p-6 space-y-4">
-      <a href="index.html" class="block py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-white">Home</a>
-      <a href="micro.html" class="block py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-white">Microeconomics</a>
-      <a href="macro.html" class="block py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-white">Macroeconomics</a>
-      <a href="market.html" class="block py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-white">Market System</a>
-      <a href="inflation.html" class="block py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-white">Inflation & Policy</a>
-      <a href="accounting.html" class="block py-2 px-4 rounded-lg hover:bg-blue-700 hover:text-white">Basic Accounting</a>
-    </nav>
-    
-    <div class="absolute bottom-6 left-6 right-6 text-xs opacity-70">
-      © 2019 – Economics Project
-    </div>
-  </aside>
+<!-- ================= SIDEBAR ================= -->
+<aside
+  id="sidebar"
+  class="fixed top-0 left-0 h-screen w-64 bg-blue-950 text-white z-40
+         transform -translate-x-full md:translate-x-0 transition-transform duration-300">
 
-  <!-- OVERLAY (Mobile) -->
-  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-40 hidden z-30 md:hidden"></div>
+  <div class="p-6 border-b border-blue-800">
+    <h2 class="text-xl font-bold">Asafati Gea</h2>
+    <p class="text-sm opacity-80">Economics Learning</p>
+  </div>
 
-  <!-- MAIN CONTENT -->
-  <main class="md:ml-64 pt-20 md:pt-0">
+  <nav class="p-6 space-y-2">
+    <a href="index.html" class="block px-4 py-2 rounded-lg hover:bg-blue-700">Home</a>
+    <a href="micro.html" class="block px-4 py-2 rounded-lg hover:bg-blue-700">Microeconomics</a>
+    <a href="macro.html" class="block px-4 py-2 rounded-lg hover:bg-blue-700">Macroeconomics</a>
+    <a href="market.html" class="block px-4 py-2 rounded-lg bg-blue-700">Market System</a>
+    <a href="inflation.html" class="block px-4 py-2 rounded-lg hover:bg-blue-700">Inflation & Policy</a>
+    <a href="accounting.html" class="block px-4 py-2 rounded-lg hover:bg-blue-700">Basic Accounting</a>
+  </nav>
 
-    <!-- HERO SECTION -->
-    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 to-indigo-800 text-white px-6">
-      <div class="max-w-4xl text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6">
-          Sistem Pasar: Mekanisme Permintaan dan Penawaran
-        </h1>
-        <p class="text-lg md:text-xl opacity-90 mb-4">
-          Menyelami bagaimana pasar bekerja dalam menentukan harga barang dan jasa.
-        </p>
-        <p class="italic text-xl mb-8">
-          “Sistem pasar adalah tempat di mana penjual dan pembeli bertemu untuk menentukan harga dan jumlah barang yang diperdagangkan.”
-        </p>
-        <a href="#concept" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
-          Jelajahi Sistem Pasar
-        </a>
-      </div>
-    </section>
+  <p class="absolute bottom-6 left-6 text-xs opacity-70">
+    © 2019 – Economics Project
+  </p>
+</aside>
 
-    <!-- CONCEPTUAL FRAMEWORK -->
-    <section id="concept" class="py-20 px-6 max-w-5xl mx-auto">
-      <h2 class="text-3xl font-bold mb-6">Apa Itu Sistem Pasar?</h2>
-      <p class="text-lg leading-relaxed">
-        Sistem pasar adalah mekanisme yang mengatur **produksi**, **distribusi**, dan **konsumsi barang** melalui interaksi antara **penjual** dan **pembeli**. Pasar ini dapat beroperasi pada berbagai skala, dari pasar lokal hingga pasar global.
+<!-- ================= OVERLAY ================= -->
+<div id="overlay" class="fixed inset-0 bg-black/40 hidden z-30 md:hidden"></div>
+
+<!-- ================= MAIN ================= -->
+<main class="md:ml-64 pt-20 md:pt-0">
+
+<!-- ================= HERO ================= -->
+<section
+  class="min-h-screen flex items-center bg-gradient-to-br from-blue-900 to-indigo-800
+         text-white px-4 sm:px-6 lg:px-8">
+
+  <div class="max-w-5xl mx-auto text-center">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+      Sistem Pasar: Permintaan & Penawaran
+    </h1>
+
+    <p class="text-base sm:text-lg md:text-xl opacity-90 mb-4">
+      Memahami bagaimana harga dan jumlah barang ditentukan
+    </p>
+
+    <p class="italic text-lg md:text-xl mb-8">
+      “Pasar adalah tempat pertemuan pembeli dan penjual.”
+    </p>
+
+    <a href="#concept"
+       class="inline-block bg-white text-blue-900 px-8 py-3 rounded-full
+              font-semibold hover:bg-gray-200 transition">
+      Jelajahi Sistem Pasar
+    </a>
+  </div>
+</section>
+
+<!-- ================= CONCEPT ================= -->
+<section id="concept"
+  class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+
+  <h2 class="text-3xl font-bold mb-6">Apa Itu Sistem Pasar?</h2>
+
+  <p class="text-lg leading-relaxed mb-6">
+    Sistem pasar adalah mekanisme yang mengatur
+    <strong>produksi</strong>, <strong>distribusi</strong>,
+    dan <strong>konsumsi barang</strong>
+    melalui interaksi penjual dan pembeli.
+  </p>
+
+  <p class="text-lg leading-relaxed">
+    Harga terbentuk dari pertemuan
+    <strong>permintaan</strong> dan <strong>penawaran</strong>,
+    yang menjadi dasar ekonomi pasar.
+  </p>
+</section>
+
+<!-- ================= SUPPLY & DEMAND ================= -->
+<section class="bg-white py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-8">
+      Mekanisme Permintaan dan Penawaran
+    </h2>
+
+    <p class="text-lg leading-relaxed mb-6">
+      Semakin tinggi harga, semakin sedikit permintaan.
+      Sebaliknya, semakin tinggi harga,
+      semakin besar penawaran.
+    </p>
+
+    <div class="bg-blue-100 p-6 rounded-xl shadow">
+      <h3 class="font-bold text-xl mb-2">
+        Contoh: Harga Minyak
+      </h3>
+      <p class="text-sm leading-relaxed">
+        Kenaikan harga minyak mendorong produsen
+        meningkatkan produksi,
+        sementara konsumen mengurangi konsumsi.
       </p>
-      <p class="text-lg leading-relaxed mt-6">
-        Dalam sistem pasar, harga barang dan jasa ditentukan oleh **pertemuan antara permintaan dan penawaran**. Hukum permintaan dan penawaran adalah prinsip dasar dalam ekonomi pasar, di mana harga dan jumlah barang dipengaruhi oleh sejauh mana barang tersebut diminati dan ketersediaannya.
-      </p>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- MECHANICS OF SUPPLY AND DEMAND -->
-    <section class="bg-white py-20 px-6">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl font-bold mb-6">Mekanisme Permintaan dan Penawaran</h2>
-        <p class="text-lg leading-relaxed mb-6">
-          Hukum **permintaan** menyatakan bahwa semakin tinggi harga suatu barang, semakin sedikit orang yang mau membeli barang tersebut. Sebaliknya, hukum **penawaran** menyatakan bahwa semakin tinggi harga, semakin banyak barang yang akan diproduksi dan dijual.
+<!-- ================= EQUILIBRIUM ================= -->
+<section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-100">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6">
+      Keseimbangan Pasar
+    </h2>
+
+    <p class="text-lg leading-relaxed">
+      Keseimbangan pasar tercapai ketika jumlah
+      yang diminta sama dengan jumlah yang ditawarkan,
+      sehingga tidak terjadi kelebihan atau kekurangan barang.
+    </p>
+  </div>
+</section>
+
+<!-- ================= EXAMPLES ================= -->
+<section class="bg-white py-20 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-8">
+      Contoh Dunia Nyata
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-2xl bg-gray-50 shadow">
+        <h3 class="font-bold text-xl mb-2">
+          Pasar Smartphone
+        </h3>
+        <p class="text-sm">
+          Harga tinggi saat peluncuran karena permintaan besar
+          dan pasokan terbatas.
         </p>
-        <div class="bg-blue-100 p-6 rounded-lg shadow-lg">
-          <h3 class="font-bold text-xl mb-2">Contoh: Harga Minyak</h3>
-          <p class="text-sm">Misalnya, saat harga minyak dunia naik, banyak perusahaan minyak akan meningkatkan produksi mereka, sementara konsumen akan mengurangi konsumsi minyak, sehingga terjadi keseimbangan di pasar.</p>
-        </div>
       </div>
-    </section>
 
-    <!-- MARKET EQUILIBRIUM -->
-    <section class="py-20 px-6 bg-gray-100">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl font-bold mb-6">Keseimbangan Pasar</h2>
-        <p class="text-lg leading-relaxed">
-          Keseimbangan pasar terjadi ketika jumlah barang yang diminta oleh pembeli sama dengan jumlah barang yang ditawarkan oleh penjual pada harga tertentu. Ini adalah titik di mana pasar tidak mengalami kekurangan atau kelebihan barang.
+      <div class="p-6 rounded-2xl bg-gray-50 shadow">
+        <h3 class="font-bold text-xl mb-2">
+          Pasar Emas
+        </h3>
+        <p class="text-sm">
+          Ketidakpastian ekonomi meningkatkan permintaan emas
+          sebagai aset aman.
         </p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- REAL-WORLD EXAMPLES -->
-    <section class="bg-white py-20 px-6">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl font-bold mb-6">Contoh Dunia Nyata dalam Sistem Pasar</h2>
-        <p class="text-lg leading-relaxed mb-6">
-          Untuk memahami sistem pasar, mari kita lihat beberapa contoh dunia nyata yang memanfaatkan konsep permintaan dan penawaran:
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white p-6 rounded-2xl shadow-lg">
-            <h3 class="font-bold text-xl mb-2">Pasar Smartphone</h3>
-            <p class="text-sm">Ketika smartphone terbaru dirilis, permintaan sangat tinggi, tetapi pasokan terbatas, sehingga harga smartphone tersebut tinggi. Setelah beberapa bulan, harga menurun karena pasokan meningkat dan permintaan stabil.</p>
-          </div>
-          <div class="bg-white p-6 rounded-2xl shadow-lg">
-            <h3 class="font-bold text-xl mb-2">Pasar Emas</h3>
-            <p class="text-sm">Harga emas dipengaruhi oleh **penawaran** dari tambang emas dan **permintaan** investor. Ketika ketidakpastian ekonomi meningkat, permintaan emas sebagai aset aman juga meningkat, mengarah pada kenaikan harga.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<!-- ================= CTA ================= -->
+<section class="py-12 px-4 sm:px-6 lg:px-8 text-center">
+  <a href="inflation.html"
+     class="inline-block bg-blue-900 text-white px-8 py-3 rounded-full
+            font-semibold hover:bg-blue-800 transition">
+    Lanjut ke Inflasi & Kebijakan →
+  </a>
+</section>
 
-    <!-- CTA -->
-    <section class="py-10 px-6 text-center">
-      <a href="#about" class="inline-block bg-blue-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-800 transition">
-        Pelajari Lebih Lanjut Tentang Ekonomi
-      </a>
-    </section>
+</main>
 
-  </main>
+<!-- ================= SCRIPT ================= -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
 
-  <!-- SCRIPT TO TOGGLE SIDEBAR ON MOBILE -->
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
+  menuBtn?.addEventListener("click", () => {
+    sidebar.classList.toggle("-translate-x-full");
+    overlay.classList.toggle("hidden");
+  });
 
-    menuBtn?.addEventListener('click', () => {
-      sidebar.classList.toggle('-translate-x-full');
-      overlay.classList.toggle('hidden');
-    });
-
-    overlay?.addEventListener('click', () => {
-      sidebar.classList.add('-translate-x-full');
-      overlay.classList.add('hidden');
-    });
-  </script>
+  overlay?.addEventListener("click", () => {
+    sidebar.classList.add("-translate-x-full");
+    overlay.classList.add("hidden");
+  });
+</script>
 
 </body>
 </html>
